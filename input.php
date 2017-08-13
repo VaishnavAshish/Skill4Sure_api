@@ -16,7 +16,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 
         exit(0);
     }
-	include_once("../conn.php");
+	include_once("basic.php");
 	 $d = json_decode(file_get_contents("php://input"), false);
 	 
 	 
