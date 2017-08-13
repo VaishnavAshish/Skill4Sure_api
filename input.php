@@ -31,12 +31,14 @@ function decrypt($encrypted_string, $encryption_key) {
 	 
     if(isset($d->module) && $d->module!="")
     {
-        $query = mysql_query("SELECT * from module");
-        if($row=mysql_fetch_array($query))
-        {
-            $res[] = $row;
-        }
-       echo json_encode($res);
+        if($query = mysql_query("SELECT * from module"))
+	{
+      	 while($row=mysql_fetch_array($query))
+        	{
+            		$res[] = $row;
+        	}
+       	   echo json_encode($res);
+	}
     }
 	 
 ?>
